@@ -1,0 +1,274 @@
+.landing-container{
+	padding-top: 60px;
+	padding-left: 50px;
+	padding-right: 50px;
+	max-width: 1440px;
+	margin: auto;
+
+	
+
+	.content{
+		font-family: $font-3;
+		color: $neon-blue;
+		text-transform: uppercase;
+		font-size:0;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+
+
+		.passion{
+		
+		}
+
+		.left{
+			width: calc(100% * 6 / 12);
+			display: inline-block;
+			font-size: 16px;
+			opacity: 0;
+			animation: flickerActivate 2s forwards;
+			animation-delay: 1s;
+			order: 1;
+
+
+
+			.title{
+				line-height: 35px;
+			}
+
+			.passions{
+				line-height: 30px;
+				display: inline-block;
+
+				.passion {
+					height: 12px;
+					display: inline-block;
+				}
+			}
+
+			.cursor{
+				position: relative;
+				height: 20px;
+				width: 4px;
+				background-color: $neon-blue;
+				display: inline-block;
+				top: 0;
+				transform: translateX(-15px);
+				box-shadow: 0 0 1px #FFF, 0 0 2px $neon-blue, 0 0 5px $neon-blue, 0 0 20px #fff, 0 0 30px $neon-blue;
+				animation: blink 2s infinite;
+			}
+
+		}
+		.right{
+			width: calc(100% * 6 / 12);
+			min-height: 280px;
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			opacity: 0;
+			animation: flickerActivate 2s forwards;
+			animation-delay: 1.2s;
+			text-align: center;
+			order: 2;
+
+
+			//credit for globe: https://codepen.io/chris22smith/pen/LGeVzz
+			// I want to fiddle with this eventually (add more lattitude lines, make size dynamic)
+
+			.globe-wrapper{
+				$radius: 200px;
+
+				margin: 50px;
+				perspective: 800px;
+				perspective-origin: 50% 100px;
+				float: right;
+
+				.globe {
+
+				  position: relative;
+				  margin: 0 auto;
+				  width: $radius;
+				  transform-style: preserve-3d;
+				  animation: spin 60s infinite linear;
+
+
+				  .mid{
+				  	transform:rotateX(90deg);
+
+				  }
+
+				  .top{
+				  	transform: translateY(-50px) rotateX(90deg);
+				  }
+
+				  .veryTop{
+				  	transform: translateY(-30px) rotateX(90deg);
+				  }
+
+
+				  .bottom{
+				  	transform: translateY(50px) rotateX(90deg);
+				  }
+
+				  .veryBottom{
+				  	transform: translateY(120px) rotateX(90deg);
+				  }
+
+				  .two{
+
+				  	height: 172px;
+				  	width: 172px;
+				  	margin: 14px;
+
+				  }
+
+				  .one{
+
+				  	height: 100px;
+				  	width: 100px;
+				  	margin: 14px;
+				  }
+				}
+
+				.globe > div {
+				  border:solid 2px $neon-blue;
+				  box-shadow: 0 0 2px #000, 0 0 4px #FFF, 0 0 8px $dark-neon-blue, 0 0 10px $dark-neon-blue;
+				  border-radius:50%;
+				  height: $radius;
+				  opacity:.8;
+				  position: absolute;
+				  width: $radius;
+				  background-color: $darker-neon-blue;
+				}
+
+				
+
+				  
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.landing-container{
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 8px;
+		padding-right: 8px;
+
+		.content{
+			flex-flow: column nowrap;
+
+			.left{
+				width: 100%;
+				order: 2;
+				text-align: center;
+				font-size: 10px;
+
+				.cursor{
+					height: 14px;
+					transform: translateX(-10px)
+				}
+			}
+			.right{
+				width: 100%;
+				order: 1;
+
+				.globe-wrapper{
+					float: none;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(5deg) rotateY(0) rotateZ(5deg);
+  }
+  50% {
+    transform: rotateX(-5deg) rotateY(180deg) rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateX(5deg) rotateY(360deg) rotateZ(5deg);
+  }
+}
+
+@keyframes blink{
+	0%, 24%{
+		opacity: 1;
+	}
+	25%, 49%{
+		opacity: 0;
+	}
+	50%, 74%{
+		opacity: 1;
+	}
+	75%, 100%{
+		opacity: 0;
+	}
+}
+
+
+@keyframes flickerActivate{
+
+	0%{
+		opacity: 0;
+	}
+	2%{
+		opacity: 1;
+
+	}
+	3%{
+		opacity:0;
+	}
+	10%, 100%{
+		opacity:1;
+		left: 0;
+	}
+}
+
+@keyframes radiate{
+	0%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue, 0 0 55px $darker-neon-blue;
+	}
+	5%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 25px $darker-neon-blue, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue;
+	}
+	10%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 25px #fff, 0 0 35px $darker-neon-blue, 0 0 45px $darker-neon-blue, 0 0 60px $darker-neon-blue;
+	}
+	20%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 30px #fff, 0 0 40px $darker-neon-blue, 0 0 50px $darker-neon-blue, 0 0 65px $darker-neon-blue;
+	}
+	30%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 25px #fff, 0 0 35px $darker-neon-blue, 0 0 45px $darker-neon-blue, 0 0 60px $darker-neon-blue;
+	}
+	35%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 25px $darker-neon-blue, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue;
+	}
+	40%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue, 0 0 55px $darker-neon-blue;
+	}
+	45%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 25px $darker-neon-blue, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue;
+	}
+	50%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 25px #fff, 0 0 35px $darker-neon-blue, 0 0 45px $darker-neon-blue, 0 0 60px $darker-neon-blue;
+	}
+	60%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 30px #fff, 0 0 40px $darker-neon-blue, 0 0 50px $darker-neon-blue, 0 0 65px $darker-neon-blue;
+	}
+	70%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 25px #fff, 0 0 35px $darker-neon-blue, 0 0 45px $darker-neon-blue, 0 0 60px $darker-neon-blue;
+	}
+	85%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 25px $darker-neon-blue, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue;
+	}
+	90%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue, 0 0 55px $darker-neon-blue;
+	}
+	100%{
+		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px #000, 0 0 20px #fff, 0 0 30px $darker-neon-blue, 0 0 40px $darker-neon-blue, 0 0 55px $darker-neon-blue;
+	}
+}

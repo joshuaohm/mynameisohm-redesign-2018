@@ -1,0 +1,17 @@
+@import "_variables";
+@import "_nav";
+@import "_landing";
+@import "_my-work";
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+.main-wrapper{
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	overflow: auto;
+}
