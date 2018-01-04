@@ -522,7 +522,7 @@
   opacity: 0; }
 
 .my-work-container .detail {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Russo+One", sans-serif;
   color: #c06213;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #c06213;
@@ -851,8 +851,8 @@
   opacity: 0; }
 
 .experiments-container .details .title {
-  font-size: 12px;
-  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  font-family: "Russo+One", sans-serif;
   color: #c06213;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #c06213;
   margin-bottom: 28px;
