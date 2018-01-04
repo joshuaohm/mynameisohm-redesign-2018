@@ -849,6 +849,14 @@
   display: none;
   opacity: 0; }
 
+.experiments-container .details .title {
+  font-size: 12px;
+  font-family: "Press Start 2P", cursive;
+  color: #22b1c1;
+  text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
+  margin-bottom: 10px;
+  text-align: center; }
+
 .experiments-container .detail {
   font-size: 12px;
   font-family: "Press Start 2P", cursive;
