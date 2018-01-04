@@ -1,4 +1,4 @@
-.my-work-container{
+.experiments-container{
 	display: block;
 	position: relative;
 	max-width: 1440px;
@@ -8,7 +8,7 @@
 	padding-right: 50px;
 }
 
-.my-work-container .headline{
+.experiments-container .headline{
 	font-family: $font-2;
 	font-size: 24px;
 	color: white;
@@ -17,7 +17,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.my-work-container .mobile-headline{
+.experiments-container .mobile-headline{
 	font-family: $font-2;
 	font-size: 16px;
 	color: white;
@@ -27,7 +27,7 @@
 	display: none;
 }
 
-.my-work-container .row{
+.experiments-container .row{
 	display: inline-block;
 	position: relative;
 	margin-bottom: 8px;
@@ -36,7 +36,7 @@
 	
 }
 
-.my-work-container .top{
+.experiments-container .top{
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -50,26 +50,26 @@
 
 
 
-.my-work-container .top .source.active{
+.experiments-container .top .source.active{
 	position: relative;
 	opacity: 1;
 	animation: fadeIn .3s, left .3s;
 }
 
-.my-work-container .top .source.active-prev{
+.experiments-container .top .source.active-prev{
 	position: relative;
 	opacity: 1;
 	animation: fadeIn .3s, right .3s;
 }
 
-.my-work-container .top .image-wrapper{
+.experiments-container .top .image-wrapper{
 	order: 2;
 	flex-grow: 2;
 	position: relative;
 	height: 350px;
 }
 
-.my-work-container .top .image{
+.experiments-container .top .image{
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -123,7 +123,7 @@
 	order: 3;
 }
 
-.my-work-container .top .btn-wrapper{
+.experiments-container .top .btn-wrapper{
 	position: relative;
 	flex-grow: 1;
 	font-size: 0px;
@@ -133,11 +133,11 @@
 	vertical-align: middle;
 }
 
-.my-work-container .top .mobile-btn-row-wrapper{
+.experiments-container .top .mobile-btn-row-wrapper{
 	display: none;
 }
 
-.my-work-container .top .btn:active, .my-work-container .top .btn:hover, .my-work-container .top .btn:focus{
+.experiments-container .top .btn:active, .experiments-container .top .btn:hover{
 	color: $dark-neon-orange;
 	text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px $dark-neon-orange;
 }
@@ -150,7 +150,7 @@
 	float: right;
 }
 
-.my-work-container .top .btn{
+.experiments-container .top .btn{
 	cursor: pointer;
 	position: relative;
 	width: 105px;
@@ -165,7 +165,7 @@
 
 }
 
-.my-work-container .top .btn .svg{
+.experiments-container .top .btn .svg{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -174,7 +174,7 @@
 	pointer-events: none;
 }
 
-.my-work-container .top .btn .left, .my-work-container .top .btn .right{
+.experiments-container .top .btn .left, .experiments-container .top .btn .right{
 	
 	position: absolute;
 	top: 50%;
@@ -184,21 +184,21 @@
 	line-height: 48px;
 }
 
-.my-work-container .top .btn .left{
+.experiments-container .top .btn .left{
 	left:35px;
 	text-align: left;
 	padding-left: 4px;
 	pointer-events: none;
 }
 
-.my-work-container .top .btn .right{
+.experiments-container .top .btn .right{
 	left:8px;
 	text-align: right;
 	padding-right: 4px;
 	pointer-events: none;
 }
 
-.my-work-container .bottom{
+.experiments-container .bottom{
 	position: relative;
 	font-size: 0;
 	border: 2px solid $neon-blue;
@@ -213,19 +213,19 @@
 	margin-right: auto;
 }
 
-.my-work-container .details.active{
+.experiments-container .details.active{
 	display: block;
 	opacity: 1;
 	animation: fadeIn .3s;
 }
 
-.my-work-container .details{
+.experiments-container .details{
 	position: relative;
 	display: none;
 	opacity: 0;
 }
 
-.my-work-container .detail{
+.experiments-container .detail{
 	font-size: 12px;
 	font-family: $font-3;
 	color: $neon-blue;
@@ -234,23 +234,35 @@
 	text-align: center;
 }
 
-.my-work-container .details .btn-wrapper{
+.experiments-container .details .btns-wrapper{
 	position: relative;
 	display: inline-block;
 	left: 50%;
 	transform: translateX(-50%);
-	margin-top:20px;
+	margin-top: 20px;
 }
 
-.my-work-container .details .btn:hover, .my-work-container .details .btn:active{
+.experiments-container .details .btn-wrapper{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.experiments-container .details .btn-wrapper #source-link{
+	margin-left: 16px;
+}
+
+.experiments-container .details .btn:hover, .experiments-container .details .btn:active{
 	color: $dark-neon-orange;
 	text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px $dark-neon-orange;
 	border: 2px solid $dark-neon-orange;
 	border-radius: 4px;
-	box-shadow: inset 0 0 1px #000,  inset 0 0 2px #FFF, inset 0 0 5px $dark-neon-orange, inset 0 0 15px $dark-neon-orange, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px $dark-neon-orange, 0 0 15px $dark-neon-orange;	
+	box-shadow: inset 0 0 1px #000,  inset 0 0 2px #FFF, inset 0 0 5px $dark-neon-orange, inset 0 0 15px $dark-neon-orange, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px $dark-neon-orange, 0 0 15px $dark-neon-orange;
+	
+	
 }
 
-.my-work-container .details .btn{
+.experiments-container .details .btn{
 	display: inline-block;
 	text-decoration: none;
 	color: $neon-blue;
@@ -267,20 +279,20 @@
 }
 
 @media screen and (max-width: 768px){
-	.my-work-container{
+	.experiments-container{
 		padding-left: 25px;
 		padding-right: 25px;
 	}
 
-	.my-work-container .top{
+	.experiments-container .top{
 		display: block;
 	}
 
-	.my-work-container .top .image-wrapper{
+	.experiments-container .top .image-wrapper{
 		height: 200px;
 	}
 
-	.my-work-container .top .image{
+	.experiments-container .top .image{
 		margin-left: 0px;
 		margin-right: 0px;
 		top: 50%;
@@ -291,11 +303,11 @@
 
 	}
 
-	.my-work-container .top .btn-wrapper{
+	.experiments-container .top .btn-wrapper{
 		display: none;
 	}
 
-	.my-work-container .top .mobile-btn-row-wrapper{
+	.experiments-container .top .mobile-btn-row-wrapper{
 		display: block;
 		width: 100%;
 		height: 68px;
@@ -308,7 +320,24 @@
 		}
 	}
 
-	.my-work-container .bottom{
+
+	.experiments-container .details .btn-wrapper{
+		display: block;
+
+		#source-link{
+			margin-left: 0;
+			margin-top: 16px;
+		}
+
+		.btn{
+			left:50%;
+			transform: translateX(-50%);
+		}
+
+
+	}
+
+	.experiments-container .bottom{
 		padding-left: 0;
 		padding-right: 0;
 		width: 100%;
@@ -317,23 +346,23 @@
 
 @media screen and (max-width: 480px){
 
-	.my-work-container{
+	.experiments-container{
 		padding-top: 20px;
 	}
 
-	.my-work-container .top{
+	.experiments-container .top{
 		margin-bottom: 10px;
 	}
 
-	.my-work-container .top .image-wrapper{
+	.experiments-container .top .image-wrapper{
 		height: 200px;
 	}
 
-	.my-work-container .top .mobile-btn-row-wrapper{
+	.experiments-container .top .mobile-btn-row-wrapper{
 		margin-top: 0px;
 	}
 
-	.my-work-container .top .image{
+	.experiments-container .top .image{
 		margin-left: 0px;
 		margin-right: 0px;
 		top: 50%;
@@ -343,19 +372,19 @@
 		width: 200px;
 	}
 
-	.my-work-container .bottom{
+	.experiments-container .bottom{
 		padding-left: 0;
 		padding-right: 0;
 		width: 100%;
 	}
 
-	.my-work-container .detail{
+	.experiments-container .detail{
 		padding-left: 16px;
 		padding-right: 16px;
 		font-size: 10px;
 	}
 
-	.my-work-container .details .btn{
+	.experiments-container .details .btn{
 		font-size: 10px;
 	}
 

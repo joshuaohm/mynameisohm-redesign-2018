@@ -1,7 +1,7 @@
 
-function activateWorkLink(){
+function activateExperimentLink(){
 	$('.nav-border .items .item').removeClass('active');
-	$('.my-work-link').addClass('active');
+	$('.experiments-link').addClass('active');
 
 	$('.nav .items').addClass('visible');
 }
@@ -20,14 +20,15 @@ function activateSlideRight(next){
 
 function deactivateSlide(){
 
-	$('.my-work-container .top .source').removeClass('active');
-	$('.my-work-container .top .source').removeClass('active-prev');
-	$('.my-work-container .bottom .details').removeClass('active');
+	$('.experiments-container .top .source').removeClass('active');
+	$('.experiments-container .top .source').removeClass('active-prev');
+	$('.experiments-container .bottom .details').removeClass('active');
 }
 
 function determineNextSlide(active, next, count){
 
 	//determine which slide to transition to
+	console.log(active+" "+next+" "+count);
 
 	if(active == 0 && next == -1){
 		next = count-1;
@@ -44,7 +45,7 @@ function determineNextSlide(active, next, count){
 
 function getActiveIndex(){
 
-	var id = $('.my-work-container .bottom .active').attr('id');
+	var id = $('.experiments-container .bottom .active').attr('id');
 
 	return id.split('-')[1];
 
@@ -52,7 +53,7 @@ function getActiveIndex(){
 
 function getItemCount(){
 
-	return $('.my-work-container .top .image').children().length;
+	return $('.experiments-container .top .image').children().length;
 }
 
 function handleButtonClick(e){
@@ -61,6 +62,8 @@ function handleButtonClick(e){
 	e.stopPropagation();
 
 	var inc = 0;
+
+	console.log(e.target);
 
 	if($(e.target).hasClass('left-btn')){
 		inc = -1;
@@ -73,6 +76,8 @@ function handleButtonClick(e){
 	count = getItemCount();
 
 	next = determineNextSlide(active, inc, count);
+
+	console.log(next);
 
 	deactivateSlide();
 
@@ -169,7 +174,8 @@ function rightBtnSvgSet(state){
 
 }
 
-function setWorkBinds(){
+
+function setExperimentBinds(){
 	$('.left-btn').on('mouseenter', {state: "active"}, leftBtnSvgSet);
 	$('.left-btn').on('mouseleave', {state: "inactive"}, leftBtnSvgSet);
 
@@ -182,9 +188,10 @@ function setWorkBinds(){
 
 $(document).ready( function (){
 
-	activateWorkLink();
-	setWorkBinds();
+	activateExperimentLink();
+	setExperimentBinds();
 	leftBtnSvgSet({'data': {'state': 'inactive'}});
 	rightBtnSvgSet({'data': {'state': 'inactive'}});
+
 });
 	

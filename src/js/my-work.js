@@ -6,18 +6,19 @@ function activateWorkLink(){
 	$('.nav .items').addClass('visible');
 }
 
-function activateWorkLeft(next){
+function activateSlideLeft(next){
 
 	$('#img-'+next).addClass('active');
 	$('#details-'+next).addClass('active');
 }
 
-function activateWorkRight(next){
+function activateSlideRight(next){
+
 	$('#img-'+next).addClass('active-prev');
 	$('#details-'+next).addClass('active');
 }
 
-function deactivateWork(){
+function deactivateSlide(){
 
 	$('.my-work-container .top .source').removeClass('active');
 	$('.my-work-container .top .source').removeClass('active-prev');
@@ -27,7 +28,6 @@ function deactivateWork(){
 function determineNextSlide(active, next, count){
 
 	//determine which slide to transition to
-	console.log(active+" "+next+" "+count);
 
 	if(active == 0 && next == -1){
 		next = count-1;
@@ -62,8 +62,6 @@ function handleButtonClick(e){
 
 	var inc = 0;
 
-	console.log(e.target);
-
 	if($(e.target).hasClass('left-btn')){
 		inc = -1;
 	}
@@ -76,27 +74,14 @@ function handleButtonClick(e){
 
 	next = determineNextSlide(active, inc, count);
 
-	console.log(next);
-
-	deactivateWork();
+	deactivateSlide();
 
 	if(inc == 1){
-		activateWorkLeft(next);
+		activateSlideLeft(next);
 	}
 	else if(inc == -1){
-		activateWorkRight(next);
+		activateSlideRight(next);
 	}
-}
-
-function setWorkBinds(){
-	$('.left-btn').on('mouseenter', {state: "active"}, leftBtnSvgSet);
-	$('.left-btn').on('mouseleave', {state: "inactive"}, leftBtnSvgSet);
-
-	$('.right-btn').on('mouseenter', {state: "active"}, rightBtnSvgSet);
-	$('.right-btn').on('mouseleave', {state: "inactive"}, rightBtnSvgSet);
-
-	$('.left-btn').on('click', handleButtonClick);
-	$('.right-btn').on('click', handleButtonClick);
 }
 
 function leftBtnSvgSet(state){
@@ -182,6 +167,17 @@ function rightBtnSvgSet(state){
 	var innerBottomRight2 = svg2.path("M "+(width-35)+" "+(height-12)+" L "+(width-12)+" "+(height-34)).attr({ filter: glowFilter, fill: "none", stroke: color , strokeWidth: strokeWidth1, opacity: 1, class: 'right-btn-path right-btn-glow-bottom-right'});
 	var innerBottom2 = svg2.path("M 12 "+(height-13)+" L "+(width-35)+" "+(height-12)).attr({ filter: glowFilter, fill: "none", stroke: color , strokeWidth: strokeWidth1, opacity: 1, class: 'right-btn-path right-btn-glow-bottom'});
 
+}
+
+function setWorkBinds(){
+	$('.left-btn').on('mouseenter', {state: "active"}, leftBtnSvgSet);
+	$('.left-btn').on('mouseleave', {state: "inactive"}, leftBtnSvgSet);
+
+	$('.right-btn').on('mouseenter', {state: "active"}, rightBtnSvgSet);
+	$('.right-btn').on('mouseleave', {state: "inactive"}, rightBtnSvgSet);
+
+	$('.left-btn').on('click', handleButtonClick);
+	$('.right-btn').on('click', handleButtonClick);
 }
 
 $(document).ready( function (){

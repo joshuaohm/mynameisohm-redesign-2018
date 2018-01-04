@@ -54,7 +54,7 @@
 
 	.item:hover, .item.active{
 		animation: 0;
-		color: $dark-neon-orange;
+		color: $neon-orange;
 		text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 5px $neon-orange, 0 0 20px $neon-orange, 0 0 30px $dark-neon-orange, 0 0 40px $dark-neon-orange, 0 0 55px $dark-neon-orange;
 	}
 

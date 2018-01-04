@@ -1,0 +1,48 @@
+script(src="../js/experiments.js")
+.experiments-container
+	.row
+		.top
+			.btn-wrapper#left-wrapper
+				.btn.left-btn
+					svg.svg#prev
+					.left Prev
+			.image-wrapper
+				a(href="").image
+					.source(id="img-0" style="background-image: url('../assets/img/time-tracker-big.jpg');").active
+					.source(id="img-1" style="background-image: url('../assets/img/cheetosstore-big.jpg');")
+
+			.btn-wrapper#right-wrapper
+				.btn.right-btn
+					svg.svg#next
+					.right Next
+
+			.mobile-btn-row-wrapper
+				.btn.left-btn
+					svg.svg#mobile-prev
+					.left Prev
+
+				.btn.right-btn
+					svg.svg#mobile-next
+					.right Next
+
+		.bottom
+			.details.active#details-0
+				.title Time Tracker
+				.detail One
+				.detail Two
+				.detail Three
+				.btns-wrapper
+					.btn-wrapper
+						a(href='http://acco.org').btn.link View App
+					.btn-wrapper
+						a(href='http://acco.org').btn.link#source-link View Source
+			.details#details-1
+				.title Status Panel
+				.detail Two
+				.detail Three
+				.detail Four
+				.btns-wrapper
+					.btn-wrapper
+						a(href='http://acco.org').btn.link View App
+					.btn-wrapper
+						a(href='https://www.cheetosstore.com/').btn.link#source-link View Source
