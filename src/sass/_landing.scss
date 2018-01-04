@@ -91,43 +91,45 @@
 				  transform-style: preserve-3d;
 				  animation: spin 60s infinite linear;
 
+					.two{
 
-				  .mid{
-				  	transform:rotateX(90deg);
+						height: 172px;
+						width: 172px;
+						margin: 14px;
 
-				  }
+					}
 
-				  .top{
-				  	transform: translateY(-50px) rotateX(90deg);
-				  }
+					.one{
 
-				  .veryTop{
-				  	transform: translateY(-30px) rotateX(90deg);
-				  }
+						height: 100px;
+						width: 100px;
+						margin: 14px;
+					}
+
+					.mid{
+						transform:rotateX(90deg);
+						background-color: transparent;
+					}
+
+					.top{
+						transform: translateY(-50px) rotateX(90deg);
+						background-color: transparent;
+					}
+
+					.veryTop{
+						transform: translateY(-30px) rotateX(90deg);
+					}
 
 
-				  .bottom{
-				  	transform: translateY(50px) rotateX(90deg);
-				  }
+					.bottom{
+						transform: translateY(50px) rotateX(90deg);
+						background-color: transparent;
+					}
 
-				  .veryBottom{
-				  	transform: translateY(120px) rotateX(90deg);
-				  }
+					.veryBottom{
+						transform: translateY(120px) rotateX(90deg);
+					}
 
-				  .two{
-
-				  	height: 172px;
-				  	width: 172px;
-				  	margin: 14px;
-
-				  }
-
-				  .one{
-
-				  	height: 100px;
-				  	width: 100px;
-				  	margin: 14px;
-				  }
 				}
 
 				.globe > div {
@@ -140,6 +142,10 @@
 				  width: $radius;
 				  background-color: $darker-neon-blue;
 				}
+
+				
+
+				
 
 				
 

@@ -6,9 +6,12 @@ script(src="../js/my-work.js")
 				.btn.left-btn
 					svg.svg#prev
 					.left Prev
-
-			a(href="/" id="img-0").image
-				img(src="")
+			.image-wrapper
+				a(href="").image
+					.source(id="img-0" style="background-image: url('../assets/img/acco-big.jpg');").active
+					.source(id="img-1" style="background-image: url('../assets/img/cheetosstore-big.jpg');")
+					.source(id="img-2" style="background-image: url('../assets/img/neustar.jpg');")
+					.source(id="img-3" style="background-image: url('../assets/img/jim-beam.jpg');")
 
 			.btn-wrapper#right-wrapper
 				.btn.right-btn
@@ -29,6 +32,18 @@ script(src="../js/my-work.js")
 				.detail One
 				.detail Two
 				.detail Three
+			.details#details-1
+				.detail Two
+				.detail Three
+				.detail Four
+			.details#details-2
+				.detail One
+				.detail Three
+				.detail Four
+			.details#details-3
+				.detail Mila
+				.detail Kunis
+				.detail .gif
 			.btn-wrapper
 				a(class="btn link" href="/") View Site
 

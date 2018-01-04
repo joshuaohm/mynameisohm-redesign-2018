@@ -6,12 +6,97 @@ function activateWorkLink(){
 	$('.nav .items').addClass('visible');
 }
 
+function activateWorkLeft(next){
+
+	$('#img-'+next).addClass('active');
+	$('#details-'+next).addClass('active');
+}
+
+function activateWorkRight(next){
+	$('#img-'+next).addClass('active-prev');
+	$('#details-'+next).addClass('active');
+}
+
+function deactivateWork(){
+
+	$('.my-work-container .top .source').removeClass('active');
+	$('.my-work-container .top .source').removeClass('active-prev');
+	$('.my-work-container .bottom .details').removeClass('active');
+}
+
+function determineNextSlide(active, next, count){
+
+	//determine which slide to transition to
+	console.log(active+" "+next+" "+count);
+
+	if(active == 0 && next == -1){
+		next = count-1;
+	}
+	else if (active == parseInt(count - 1) && next == 1){
+		next = 0;
+	}
+	else{
+		next = +active + +next;
+	}
+
+	return next;
+}
+
+function getActiveIndex(){
+
+	var id = $('.my-work-container .bottom .active').attr('id');
+
+	return id.split('-')[1];
+
+}
+
+function getItemCount(){
+
+	return $('.my-work-container .top .image').children().length;
+}
+
+function handleButtonClick(e){
+
+	e.preventDefault();
+	e.stopPropagation();
+
+	var inc = 0;
+
+	console.log(e.target);
+
+	if($(e.target).hasClass('left-btn')){
+		inc = -1;
+	}
+	else if($(e.target).hasClass('right-btn')){
+		inc = 1;
+	}
+
+	var active = getActiveIndex();
+	count = getItemCount();
+
+	next = determineNextSlide(active, inc, count);
+
+	console.log(next);
+
+	deactivateWork();
+
+	if(inc == 1){
+		activateWorkLeft(next);
+	}
+	else if(inc == -1){
+		activateWorkRight(next);
+	}
+}
+
 function setWorkBinds(){
 	$('.left-btn').on('mouseenter', {state: "active"}, leftBtnSvgSet);
 	$('.left-btn').on('mouseleave', {state: "inactive"}, leftBtnSvgSet);
 
 	$('.right-btn').on('mouseenter', {state: "active"}, rightBtnSvgSet);
 	$('.right-btn').on('mouseleave', {state: "inactive"}, rightBtnSvgSet);
+
+	$('.left-btn').on('click', handleButtonClick);
+	$('.right-btn').on('click', handleButtonClick);
 }
 
 function leftBtnSvgSet(state){
