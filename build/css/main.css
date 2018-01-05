@@ -417,6 +417,15 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover; }
+    .my-work-container .top .image .source a {
+      outline: none;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2; }
   .my-work-container .top .image .source.active {
     display: inline-block;
     position: relative;
@@ -463,8 +472,8 @@
   height: 68px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: "Audiowide", cursive;
-  font-size: 14px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
   color: #22b1c1;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
   z-index: 3; }
@@ -486,13 +495,13 @@
   line-height: 48px; }
 
 .my-work-container .top .btn .left {
-  left: 35px;
+  left: 32px;
   text-align: left;
   padding-left: 4px;
   pointer-events: none; }
 
 .my-work-container .top .btn .right {
-  left: 8px;
+  left: 12px;
   text-align: right;
   padding-right: 4px;
   pointer-events: none; }
@@ -523,9 +532,8 @@
 
 .my-work-container .detail {
   font-size: 16px;
-  font-family: "Russo+One", sans-serif;
+  font-family: "Audiowide", cursive;
   color: #c06213;
-  text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #c06213;
   margin-bottom: 16px;
   text-align: center;
   line-height: 18px; }
@@ -547,6 +555,7 @@
 .my-work-container .details .btn {
   display: inline-block;
   text-decoration: none;
+  text-transform: uppercase;
   color: #22b1c1;
   font-family: "Press Start 2P", cursive;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
@@ -746,6 +755,15 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover; }
+    .experiments-container .top .image .source a {
+      outline: none;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2; }
   .experiments-container .top .image .source.active {
     display: inline-block;
     position: relative;
@@ -792,8 +810,8 @@
   height: 68px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: "Audiowide", cursive;
-  font-size: 14px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
   color: #22b1c1;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
   z-index: 3; }
@@ -815,13 +833,13 @@
   line-height: 48px; }
 
 .experiments-container .top .btn .left {
-  left: 35px;
+  left: 32px;
   text-align: left;
   padding-left: 4px;
   pointer-events: none; }
 
 .experiments-container .top .btn .right {
-  left: 8px;
+  left: 12px;
   text-align: right;
   padding-right: 4px;
   pointer-events: none; }
@@ -852,17 +870,15 @@
 
 .experiments-container .details .title {
   font-size: 16px;
-  font-family: "Russo+One", sans-serif;
+  font-family: "Audiowide", cursive;
   color: #c06213;
-  text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #c06213;
   margin-bottom: 28px;
   text-align: center; }
 
 .experiments-container .detail {
   font-size: 14px;
-  font-family: "Russo+One", sans-serif;
+  font-family: "Audiowide", cursive;
   color: #c06213;
-  text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #c06213;
   text-align: center;
   margin-bottom: 16px;
   line-height: 18px; }
@@ -893,6 +909,7 @@
   display: inline-block;
   text-decoration: none;
   color: #22b1c1;
+  text-transform: uppercase;
   font-family: "Press Start 2P", cursive;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
   border: 2px solid #22b1c1;
