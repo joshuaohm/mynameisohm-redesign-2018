@@ -85,14 +85,18 @@
     padding-left: 14px;
     padding-right: 14px; }
     .items .item {
-      font-size: 12px; } }
+      font-size: 12px; }
+    .items .one, .items .two, .items .three {
+      animation: none; } }
 
 @media screen and (max-width: 320px) {
   .items {
     padding-left: 14px;
     padding-right: 14px; }
     .items .item {
-      font-size: 10px; } }
+      font-size: 10px; }
+    .items .one, .items .two, .items .three {
+      animation: none; } }
 
 @keyframes activation {
   0% {
@@ -201,7 +205,6 @@
         animation: blink 2s infinite; }
     .landing-container .content .right {
       width: calc(100% * 6 / 12);
-      min-height: 280px;
       display: inline-block;
       position: relative;
       vertical-align: top;
@@ -362,7 +365,6 @@
 .my-work-container .row {
   display: inline-block;
   position: relative;
-  margin-bottom: 8px;
   height: 100%;
   width: 100%; }
 
@@ -512,13 +514,14 @@
   border: 2px solid #22b1c1;
   border-radius: 4px;
   box-shadow: inset 0 0 1px #000, inset 0 0 2px #FFF, inset 0 0 5px #22b1c1, inset 0 0 15px #22b1c1, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1, 0 0 15px #22b1c1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   width: 50%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 20px; }
 
 .my-work-container .details.active {
   display: block;
@@ -531,12 +534,12 @@
   opacity: 0; }
 
 .my-work-container .detail {
-  font-size: 16px;
-  font-family: "Audiowide", cursive;
+  font-size: 14px;
+  font-family: "Press Start 2P", cursive;
   color: #c06213;
   margin-bottom: 16px;
   text-align: center;
-  line-height: 18px; }
+  line-height: 20px; }
 
 .my-work-container .details .btn-wrapper {
   position: relative;
@@ -556,13 +559,14 @@
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   color: #22b1c1;
   font-family: "Press Start 2P", cursive;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
   border: 2px solid #22b1c1;
   border-radius: 4px;
   box-shadow: inset 0 0 1px #000, inset 0 0 2px #FFF, inset 0 0 5px #22b1c1, inset 0 0 15px #22b1c1, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1, 0 0 15px #22b1c1;
-  padding: 8px;
+  padding: 10px;
   background-color: #000;
   position: relative;
   font-size: 12px;
@@ -590,7 +594,8 @@
     display: block;
     width: 100%;
     height: 68px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     z-index: 1;
     position: relative; }
     .my-work-container .top .mobile-btn-row-wrapper .btn {
@@ -607,8 +612,6 @@
     margin-bottom: 10px; }
   .my-work-container .top .image-wrapper {
     height: 200px; }
-  .my-work-container .top .mobile-btn-row-wrapper {
-    margin-top: 0px; }
   .my-work-container .top .image {
     margin-left: 0px;
     margin-right: 0px;
@@ -700,7 +703,6 @@
 .experiments-container .row {
   display: inline-block;
   position: relative;
-  margin-bottom: 8px;
   height: 100%;
   width: 100%; }
 
@@ -850,13 +852,14 @@
   border: 2px solid #22b1c1;
   border-radius: 4px;
   box-shadow: inset 0 0 1px #000, inset 0 0 2px #FFF, inset 0 0 5px #22b1c1, inset 0 0 15px #22b1c1, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1, 0 0 15px #22b1c1;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   width: 50%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 20px; }
 
 .experiments-container .details.active {
   display: block;
@@ -869,19 +872,19 @@
   opacity: 0; }
 
 .experiments-container .details .title {
-  font-size: 16px;
-  font-family: "Audiowide", cursive;
+  font-size: 14px;
+  font-family: "Press Start 2P", cursive;
   color: #c06213;
   margin-bottom: 28px;
   text-align: center; }
 
 .experiments-container .detail {
   font-size: 14px;
-  font-family: "Audiowide", cursive;
+  font-family: "Press Start 2P", cursive;
   color: #c06213;
   text-align: center;
   margin-bottom: 16px;
-  line-height: 18px; }
+  line-height: 20px; }
 
 .experiments-container .details .btns-wrapper {
   position: relative;
@@ -910,12 +913,13 @@
   text-decoration: none;
   color: #22b1c1;
   text-transform: uppercase;
+  text-align: center;
   font-family: "Press Start 2P", cursive;
   text-shadow: 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1;
   border: 2px solid #22b1c1;
   border-radius: 4px;
   box-shadow: inset 0 0 1px #000, inset 0 0 2px #FFF, inset 0 0 5px #22b1c1, inset 0 0 15px #22b1c1, 0 0 1px #000, 0 0 2px #FFF, 0 0 5px #22b1c1, 0 0 15px #22b1c1;
-  padding: 8px;
+  padding: 10px;
   background-color: #000;
   position: relative;
   font-size: 12px;
@@ -943,7 +947,8 @@
     display: block;
     width: 100%;
     height: 68px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     z-index: 1;
     position: relative; }
     .experiments-container .top .mobile-btn-row-wrapper .btn {
@@ -968,8 +973,6 @@
     margin-bottom: 10px; }
   .experiments-container .top .image-wrapper {
     height: 200px; }
-  .experiments-container .top .mobile-btn-row-wrapper {
-    margin-top: 0px; }
   .experiments-container .top .image {
     margin-left: 0px;
     margin-right: 0px;

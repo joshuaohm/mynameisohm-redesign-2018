@@ -113,6 +113,11 @@
 		.item{
 			font-size: 12px;
 		}
+
+		.one, .two, .three {
+			//disable nav flickers in favor of globe animation performance
+			animation: none;
+		}
 	}
 }
 
@@ -124,6 +129,11 @@
 
 		.item{
 			font-size: 10px;
+		}
+
+		.one, .two, .three {
+			//disable nav flickers in favor of globe animation performance
+			animation: none;
 		}
 	}
 }
